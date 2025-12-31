@@ -2,70 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our 2 Years Anniversary 💖</title>
+  <title>For Beb 💖</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(#ffe6eb, #fff);
+      font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd1dc, #fff);
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
     }
-    h1 {
-      color: #e75480;
-    }
+
+    h1 { color: #e75480; }
+    h2 { color: #ff6f91; }
+    p { color: #444; }
+
     .card {
       background: white;
-      border-radius: 20px;
+      border-radius: 25px;
       padding: 25px;
-      margin: 20px auto;
-      max-width: 400px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 25px auto;
+      max-width: 420px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
+
     button {
       background: #e75480;
       color: white;
       border: none;
-      padding: 15px 20px;
+      padding: 14px 22px;
       font-size: 16px;
-      border-radius: 25px;
+      border-radius: 30px;
       cursor: pointer;
-      margin-top: 10px;
+      margin-top: 15px;
     }
+
     button:hover {
       background: #d1436c;
     }
+
+    .animal {
+      font-size: 60px;
+      margin-top: 15px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
     footer {
       margin-top: 40px;
+      font-size: 14px;
+      color: #666;
       font-style: italic;
-      color: #555;
     }
   </style>
+
+  <script>
+    function choose(option, animal) {
+      alert(
+        "BEB HAS SPOKEN 💕\n\n" +
+        "Choice: " + option +
+        "\n\nCute animal approval: " + animal + " 😆"
+      );
+
+      const email = "audrey.calista25@gmail.com";
+      const subject = "Beb’s Anniversary Choice 💖";
+      const body =
+        "Hi Love 💕\n\n" +
+        "I choose:\n" +
+        option +
+        "\n\nLocked in. No changing 😆\n\nLove,\nBeb";
+
+      window.location.href =
+        "mailto:" + email +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    }
+  </script>
 </head>
+
 <body>
 
-  <h1>Happy 2 Years Anniversary 💕</h1>
-  <p>My love, today you get to choose what we do together 💫</p>
+  <h1>Happy 2 Years Anniversary, Beb 💕</h1>
+  <p><strong>4 January 2026</strong></p>
+
+  <p>
+    Two years of love, laughter, and me being slightly annoying 😆  
+    Today, YOU decide our fate ❤️
+  </p>
 
   <div class="card">
     <h2>🌿 Option 1</h2>
-    <p>Picnic together at <strong>Point Ormond</strong> with good food and sunset vibes</p>
-    <button>I choose this 💖</button>
+    <p>Picnic at <strong>Point Ormond</strong> 🧺</p>
+    <div class="animal">🐻</div>
+    <button onclick="choose('Picnic at Point Ormond 🌿','🐻')">
+      Choose this 😍
+    </button>
   </div>
 
   <div class="card">
     <h2>🚆 Option 2</h2>
-    <p>A fun trip together by <strong>train or bus</strong>, just us and new memories</p>
-    <button>I choose this 💕</button>
+    <p>Adventure by <strong>train or bus</strong> 🚉</p>
+    <div class="animal">🐷</div>
+    <button onclick="choose('Trip by train or bus 🚆','🐷')">
+      Let’s go 😆
+    </button>
   </div>
 
   <div class="card">
     <h2>✨ Option 3</h2>
-    <p>You pick any place you want to go, anywhere, anytime</p>
-    <button>I choose this 💗</button>
+    <p>You pick <strong>ANY place</strong> you want 🗺️</p>
+    <div class="animal">🐼</div>
+    <button onclick="choose('Beb picks the place ✨','🐼')">
+      My choice 😌
+    </button>
   </div>
 
   <footer>
-    No matter what you choose, I just want to spend the day with you ❤️
+    Whatever you choose, I already won ❤️  
+    Because I get you, Beb 💕
   </footer>
 
 </body>
